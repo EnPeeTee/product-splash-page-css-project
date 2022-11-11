@@ -1,0 +1,188 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #404040;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: 0 2px #816fca;
+}
+
+h2 {
+    margin: 0.167em 0;
+    font-size: 2.25rem;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+
+.beta-text { 
+    font-weight: 900;
+}
+
+.subheading {
+    margin-bottom: .5em;
+    color: #575757;
+    font-weight: 900;
+}
+
+.beta-text,
+.top-text,
+.subheading {
+    text-transform: uppercase;
+}
+
+.top-text {
+    margin: 0 auto;
+    padding-top: 0.25em;
+
+    font-size: 0.875rem;
+    font-weight: 900;
+    
+    border-top: 5px solid;
+    order: -1;
+}
+
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
+.intro,
+.main-content {
+    padding-left: 2em;
+    padding-right: 2em;    
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================
+    Intro
+   ================= */
+
+.intro {
+    padding-bottom: 1.5em;
+    justify-content: space-between;
+    /* align-items: center; */
+
+    min-height: 250px; 
+    text-align: center;    
+    
+    color: #fff;
+    background: #9480e4 url("images/intro-bg.png");
+    background-size: cover;
+}
+
+/* ====================
+    Main content
+   ==================== */
+
+.main-content {
+    padding-top: 2.5em;
+    align-items: center;
+}
+
+.img-main {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
+}
+
+/* =================
+    Form
+   ================= */
+
+input,
+.btn {
+    width: 100%;
+    font-family: inherit;
+    border-radius: 5px;
+}
+
+input {
+    margin-bottom: 0.75em;
+    padding: 0.5em;
+    
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+}
+
+.btn {
+    padding: .75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    margin-top: 1em;
+    color: #e6e8ec;
+    background-color: #8a71ec;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #b7a7f6;
+}
+
+/* =================
+    Media queries 
+   ================= */
+
+@media (min-width: 576px) {
+    body {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 2.625rem;
+    }
+    
+    .beta-text {
+        font-size: 1.25rem;
+    }
+
+    .intro, 
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    .main-content {
+        padding-top: 0;
+        justify-content: center;
+    }
+}
